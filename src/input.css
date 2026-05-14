@@ -1857,6 +1857,9 @@
     .gradient-6,.gradient-7 {
         @apply bg-[130%_auto]
     }
+    .gradient-10 {
+        @apply bg-[linear-gradient(43deg,#4780bb_0,#50c4c8_46%,#ffe070_100%)]
+    }
     .btn-outline-gradient,.btn-outline-gradient.disabled,.btn-outline-gradient:disabled {
         @apply bg-origin-border shadow-[2px_1000px_1px_#ffffff_inset] px-[1.1rem] py-2 border-2 border-solid !border-transparent
         active:border-[transparent]
