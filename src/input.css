@@ -390,7 +390,7 @@
         @apply min-h-[calc(1.7em_+_0.8rem_+_2px)]
     }
     .form-select {
-        @apply block w-full text-[.75rem] font-medium leading-[1.7] text-[#959ca9] appearance-none bg-[#fefefe] bg-[image:var(--form-select-bg-img),var(--form-select-bg-icon,none)] bg-no-repeat bg-[right_0.75rem_center] border shadow-[0_0_1.25rem_rgba(30,34,40,0.04)] pl-4 pr-8 py-[0.6rem] rounded-[0.4rem] border-solid border-[rgba(8,60,130,0.07)] motion-reduce:transition-none focus:shadow-[0_0_1.25rem_rgba(30,34,40,0.04),unset] focus:border-[rgba(8,60,130,0.1)] disabled:bg-[#aab0bc];
+        @apply block w-full text-[.75rem] font-medium leading-[1.7] text-[#959ca9] appearance-none bg-[#fefefe] bg-[image:var(--form-select-bg-img),var(--form-select-bg-icon,none)] bg-no-repeat bg-[right_0.75rem_center] border shadow-[0_0_1.25rem_rgba(22,126,165,0.04)] pl-4 pr-8 py-[0.6rem] rounded-[0.4rem] border-solid border-[rgba(8,60,130,0.07)] motion-reduce:transition-none focus:shadow-[0_0_1.25rem_rgba(22,126,165,0.04),unset] focus:border-[rgba(8,60,130,0.1)] disabled:bg-[#aab0bc];
         --form-select-bg-img:url("data:image/svg+xml,%3Csvg version='1.1' xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'%3E%3Cpath fill='%2360697b' d='M22.667 12.227c-0.241-0.24-0.573-0.388-0.94-0.388s-0.699 0.148-0.94 0.388l0-0-4.787 4.72-4.72-4.72c-0.241-0.24-0.573-0.388-0.94-0.388s-0.699 0.148-0.94 0.388l0-0c-0.244 0.242-0.394 0.577-0.394 0.947s0.151 0.705 0.394 0.947l5.653 5.653c0.242 0.244 0.577 0.394 0.947 0.394s0.705-0.151 0.947-0.394l0-0 5.72-5.653c0.244-0.242 0.394-0.577 0.394-0.947s-0.151-0.705-0.394-0.947l-0-0z'%3E%3C/path%3E%3C/svg%3E");
         background-size: 20px 20px;
         transition:border-color .15s ease-in-out,box-shadow .15s ease-in-out
@@ -643,7 +643,7 @@
         @apply whitespace-nowrap after:inline-block after:font-bold after:content-["\e92d"] after:ml-[0.05rem] after:border-0 empty:after:ml-0 after:font-Unicons after:align-[-3px]
     }
     .dropdown-menu {
-        @apply absolute z-[1000] hidden min-w-[10rem] text-[0.75rem] text-[#343f52] text-left bg-white bg-clip-padding border-[1px] border-transparent rounded-[0.4rem] !shadow-[0rem_0rem_1.25rem_rgba(30,34,40,0.06)] m-0 border-solid
+        @apply absolute z-[1000] hidden min-w-[10rem] text-[0.75rem] text-[#343f52] text-left bg-white bg-clip-padding border-[1px] border-transparent rounded-[0.4rem] !shadow-[0rem_0rem_1.25rem_rgba(22,126,165,0.06)] m-0 border-solid
         list-none p-[1rem_0];
     }
     .dropdown-menu[data-bs-popper] {
@@ -750,7 +750,7 @@
         @apply px-[1.05rem]
     }
     .btn-group.show .dropdown-toggle {
-        @apply shadow-[0_0.25rem_0.75rem_rgba(30,34,40,0.15)]
+        @apply shadow-[0_0.25rem_0.75rem_rgba(22,126,165,0.15)]
     }
    .nav {
         @apply text-[0.8rem] font-bold text-[#343f52] p-0 flex flex-wrap mb-0 list-none;
@@ -969,7 +969,7 @@
         @apply flex items-center min-h-[calc(100%_-_0.5rem_*_2)]
     }
     .modal-content {
-        @apply relative flex flex-col w-full pointer-events-auto bg-[#fefefe] bg-clip-padding border-[0] border-[rgba(0,0,0,0.175)] rounded-[0.4rem] shadow-[0rem_0rem_1.25rem_rgba(30,34,40,0.04)] border-solid;
+        @apply relative flex flex-col w-full pointer-events-auto bg-[#fefefe] bg-clip-padding border-[0] border-[rgba(0,0,0,0.175)] rounded-[0.4rem] shadow-[0rem_0rem_1.25rem_rgba(22,126,165,0.04)] border-solid;
         outline:0
     }
     .modal-backdrop.show {
@@ -979,10 +979,10 @@
         @apply opacity-0;
       }
       .modal-backdrop {
-        @apply fixed z-[1050] w-screen h-screen bg-[rgba(30,34,40,0.9)] left-0 top-0;
+        @apply fixed z-[1050] w-screen h-screen bg-[rgba(22,126,165,0.9)] left-0 top-0;
       }
     .offcanvas {
-        @apply fixed z-[1045] flex flex-col max-w-full text-[#ffffff] invisible bg-[#1e2228] bg-clip-padding shadow-[none] transition-[transform_0.3s_ease-in-out] bottom-0 motion-reduce:transition-none outline-0;
+        @apply fixed z-[1045] flex flex-col max-w-full text-[#ffffff] invisible bg-[#167EA5] bg-clip-padding shadow-[none] transition-[transform_0.3s_ease-in-out] bottom-0 motion-reduce:transition-none outline-0;
         outline:0
     }
     .offcanvas.offcanvas-start {
@@ -1004,7 +1004,7 @@
         @apply visible
     }
     .offcanvas-backdrop {
-        @apply fixed z-[1040] w-screen h-screen bg-[rgba(30,34,40,0.7)] left-0 top-0
+        @apply fixed z-[1040] w-screen h-screen bg-[rgba(22,126,165,0.7)] left-0 top-0
     }
     .offcanvas-backdrop.fade {
         @apply opacity-0
@@ -1309,7 +1309,7 @@
         @apply bg-transparent
     }
     .form-check-input {
-        @apply shadow-[0_0_1.25rem_rgba(30,34,40,0.04)] mt-[0.2rem]
+        @apply shadow-[0_0_1.25rem_rgba(22,126,165,0.04)] mt-[0.2rem]
     }
     .form-select {
         @apply bg-clip-padding
@@ -1339,13 +1339,13 @@
         @apply !rounded-[50rem];
       }
     .btn:not(.btn-link):hover {
-    @apply translate-y-[-0.15rem] shadow-[0_0.25rem_0.75rem_rgba(30,34,40,0.15)];
+    @apply translate-y-[-0.15rem] shadow-[0_0.25rem_0.75rem_rgba(22,126,165,0.15)];
     }
     .btn.btn-circle.btn-play:hover {
     @apply translate-y-0;
     }
     .btn.btn-white:hover,.btn[class*=btn-soft-]:hover {
-        @apply shadow-[0_0.25rem_0.75rem_rgba(30,34,40,0.05)]
+        @apply shadow-[0_0.25rem_0.75rem_rgba(22,126,165,0.05)]
     }
     .btn.btn-block {
         @apply w-[2.2rem] h-[2.2rem] inline-flex items-center justify-center !text-[1rem] leading-none p-0;
@@ -1371,7 +1371,7 @@
     animation-delay:.5s
     }
     .btn.btn-circle.counter {
-        @apply shadow-[0_0_1.25rem_rgba(30,34,40,0.04)]
+        @apply shadow-[0_0_1.25rem_rgba(22,126,165,0.04)]
     }
     .btn.btn-expand {
         @apply max-h-10 text-[0.85rem] pl-0 py-[0.55rem] border-0 before:content-[""] before:transition-all before:duration-[0.45s] before:ease-[cubic-bezier(.65,0,0.076,1)] before:w-auto before:h-10 before:absolute before:w-10 before:z-0 before:rounded-[50rem] before:left-0 before:top-0 hover:translate-y-0 hover:text-white hover:shadow-none hover:before:w-full bg-inherit
@@ -2163,7 +2163,7 @@
         @apply py-[1.7rem]
     }
     .navbar-expand.extended .navbar-collapse-wrapper,.navbar-expand.fancy .navbar-collapse-wrapper {
-        @apply shadow-[0_0.25rem_0.75rem_rgba(30,34,40,0.02)] w-full rounded-[0.4rem]
+        @apply shadow-[0_0.25rem_0.75rem_rgba(22,126,165,0.02)] w-full rounded-[0.4rem]
     }
     .navbar-expand.extended:not(.extended-alt):not(.fixed) .navbar-collapse-wrapper {
         @apply pl-2 pr-6 py-0
@@ -2302,7 +2302,7 @@
         @apply border-transparent
     }
     .nav-tabs.nav-pills .nav-link {
-        @apply shadow-[0_0_0_0.05rem_rgba(8,60,130,0.06),0_0_1.25rem_rgba(30,34,40,0.04)] flex items-center mr-2 px-5 py-[0.55rem] border-transparent
+        @apply shadow-[0_0_0_0.05rem_rgba(8,60,130,0.06),0_0_1.25rem_rgba(22,126,165,0.04)] flex items-center mr-2 px-5 py-[0.55rem] border-transparent
     }
     .nav-tabs.nav-tabs-bg {
         @apply border-transparent
@@ -2311,13 +2311,13 @@
         @apply border leading-5 shadow-none px-[1.2rem] py-[1.4rem] rounded-[0.4rem] border-solid border-transparent first:ml-0 last:mr-0 bg-inherit
     }
     .nav-tabs.nav-tabs-bg .nav-link.active,.nav-tabs.nav-tabs-bg .nav-link:hover {
-        @apply text-[#343f52] shadow-[0_0_0_0.05rem_rgba(8,60,130,0.06),0_0_1.25rem_rgba(30,34,40,0.04)] border-transparent bg-white
+        @apply text-[#343f52] shadow-[0_0_0_0.05rem_rgba(8,60,130,0.06),0_0_1.25rem_rgba(22,126,165,0.04)] border-transparent bg-white
     }
     .nav-tabs.nav-tabs-bg .nav-link p {
         @apply font-medium text-[#60697b] m-0
     }
     .nav-tabs.nav-tabs-bg.nav-tabs-shadow-lg .nav-link.active,.nav-tabs.nav-tabs-bg.nav-tabs-shadow-lg .nav-link:hover {
-        box-shadow: 0 0.25rem 1.75rem rgba(30,34,40,.07) !important;
+        box-shadow: 0 0.25rem 1.75rem rgba(22,126,165,.07) !important;
     }
     .nav-tabs.flex-column.nav-tabs-bg .nav-item {
         @apply mb-4
@@ -2389,7 +2389,7 @@
         @apply translate-y-0
     }
     .navbar-stick:not(.navbar-dark) {
-        @apply shadow-[0_0_1.25rem_rgba(30,34,40,0.06)] bg-[rgba(255,255,255,.97)]
+        @apply shadow-[0_0_1.25rem_rgba(22,126,165,0.06)] bg-[rgba(255,255,255,.97)]
     }  
     button.hamburger {
         @apply cursor-pointer flex flex-col items-center justify-center text-[#343f52] transition-all duration-[0.2s] ease-in-out ml-[0.2rem] mr-0 my-0 p-0 border-0 motion-reduce:transition-none bg-inherit after:content-[""] before:content-[""]
@@ -2410,7 +2410,7 @@
         @apply text-white
     }  
     .card {
-        @apply shadow-[0_0_0_0.05rem_rgba(8,60,130,0.06),0_0_1.25rem_rgba(30,34,40,0.04)] text-inherit border-0
+        @apply shadow-[0_0_0_0.05rem_rgba(8,60,130,0.06),0_0_1.25rem_rgba(22,126,165,0.04)] text-inherit border-0
     }
     .card[class*=bg-] {
         @apply shadow-none
@@ -2509,7 +2509,7 @@
         @apply p-0 bg-[#273444]
     }
     .pagination {
-        @apply shadow-[0_0_1.25rem_rgba(30,34,40,0.04)]
+        @apply shadow-[0_0_1.25rem_rgba(22,126,165,0.04)]
     }
     .pagination .page-link {
         @apply w-10 h-10 text-[0.65rem] font-bold flex justify-center items-center
@@ -2524,7 +2524,7 @@
         @apply mr-2
     }
     .pagination.pagination-alt .page-item .page-link {
-        @apply shadow-[0_0.25rem_1.75rem_rgba(30,34,40,0.07)] rounded-[0.4rem] border-0
+        @apply shadow-[0_0.25rem_1.75rem_rgba(22,126,165,0.07)] rounded-[0.4rem] border-0
     }
     .alert-dismissible .btn-close {
         @apply absolute z-[2] text-inherit px-4 py-[1.05rem] right-0 top-0 before:text-[1.2rem] before:w-[1.2rem] before:h-[1.2rem]
@@ -2563,7 +2563,7 @@
         @apply absolute w-full h-full text-[2rem] leading-none flex items-end justify-center text-[#343f52] m-0 left-0 top-0 after:content-["%"] after:block after:text-[1rem] after:pl-[0.01rem] after:pb-[0.1rem]
     }
     .progressbar svg path:first-child {
-        @apply stroke-[rgba(30,34,40,0.06)]
+        @apply stroke-[rgba(22,126,165,0.06)]
     }
     .progressbar.blue svg path:last-child {
         @apply stroke-[color:#3f78e0]
@@ -2866,7 +2866,7 @@
     @apply border-l-[#3f78e0] [border-width:calc(0.8rem*.5)0_calc(0.8rem*.5)_0.4rem] -left-px;
 }
 .popover {
-    @apply z-[1070] block max-w-[276px] not-italic font-medium leading-[1.7] text-left text-start no-underline normal-case tracking-[normal] break-normal whitespace-normal text-[0.8rem] bg-white bg-clip-padding border shadow-[0rem_0rem_1.25rem_rgba(30,34,40,0.04)] rounded-[0.4rem] border-solid border-[rgba(164,174,198,0.2)] [word-wrap:break-word] font-Manrope ;
+    @apply z-[1070] block max-w-[276px] not-italic font-medium leading-[1.7] text-left text-start no-underline normal-case tracking-[normal] break-normal whitespace-normal text-[0.8rem] bg-white bg-clip-padding border shadow-[0rem_0rem_1.25rem_rgba(22,126,165,0.04)] rounded-[0.4rem] border-solid border-[rgba(164,174,198,0.2)] [word-wrap:break-word] font-Manrope ;
     text-shadow: none;
     word-spacing: normal;
     line-break: auto
@@ -3054,7 +3054,7 @@
     pointer-events:all
     }
     .swiper-controls .swiper-navigation .swiper-button {
-    @apply text-[#343f52] shadow-[0_0.25rem_0.75rem_rgba(30,34,40,0.02)] w-[2.2rem] h-[2.2rem] leading-[inherit] transition-all duration-[0.2s] ease-in-out rounded-[100%] border-0 motion-reduce:transition-none after:text-[1.2rem] bg-[rgba(255,255,255,.7)];
+    @apply text-[#343f52] shadow-[0_0.25rem_0.75rem_rgba(22,126,165,0.02)] w-[2.2rem] h-[2.2rem] leading-[inherit] transition-all duration-[0.2s] ease-in-out rounded-[100%] border-0 motion-reduce:transition-none after:text-[1.2rem] bg-[rgba(255,255,255,.7)];
     text-shadow:none
     }
     .swiper-controls .swiper-navigation .swiper-button:hover {
@@ -3132,7 +3132,7 @@
     @apply bottom-[0.6rem]
     }
     .swiper-container.dots-over .swiper-pagination .swiper-pagination-bullet {
-    @apply opacity-100 shadow-[0_0.25rem_0.75rem_rgba(30,34,40,0.02)] bg-white
+    @apply opacity-100 shadow-[0_0.25rem_0.75rem_rgba(22,126,165,0.02)] bg-white
     }
     .swiper-container.dots-over .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
     @apply border-white;    
@@ -3160,16 +3160,16 @@
     @apply bottom-[-2rem]
     }
     .swiper-slide.bg-overlay:before {
-    @apply content-[""] block absolute z-[1] w-full h-full left-0 top-0 bg-[rgba(30,34,40,.5)]
+    @apply content-[""] block absolute z-[1] w-full h-full left-0 top-0 bg-[rgba(22,126,165,.5)]
     }
     .swiper-slide.rounded.bg-overlay:before {
     @apply rounded-[0.4rem]
     }
     .swiper-slide.bg-overlay-300:before {
-    @apply bg-[rgba(30,34,40,.3)]
+    @apply bg-[rgba(22,126,165,.3)]
     }
     .swiper-slide.bg-overlay-400:before {
-    @apply bg-[rgba(30,34,40,.4)]
+    @apply bg-[rgba(22,126,165,.4)]
     }
     .swiper-slide.bg-overlay .caption-wrapper>*,.swiper-slide.bg-overlay [class*=container]>* {
     @apply relative z-[3]
@@ -3837,7 +3837,7 @@
     @apply block text-[calc(1.265rem_+_0.18vw)]
     }
     .overlay span.bg {
-    @apply block cursor-pointer opacity-0 z-[4] absolute w-full h-full inset-0 bg-[rgba(30,34,40,.6)]
+    @apply block cursor-pointer opacity-0 z-[4] absolute w-full h-full inset-0 bg-[rgba(22,126,165,.6)]
     }
     .overlay.color span.bg {
    @apply bg-[rgba(63,120,224,.7)]
@@ -3896,10 +3896,10 @@
     }
     .overlay.caption.caption-overlay span.bg {
     @apply opacity-100 after:content-[""] after:absolute after:opacity-0 after:w-full after:h-full after:transition-all after:duration-[0.4s] after:ease-[ease] after:left-0 after:top-0 motion-reduce:after:transition-none hover:after:opacity-100 bg-inherit;
-    background:rgba(30,34,40,0) linear-gradient(transparent 15%,transparent 20%,rgba(30,34,40,.3) 55%,rgba(30,34,40,.7) 85%,rgba(30,34,40,.75) 100%) repeat scroll 0 0
+    background:rgba(22,126,165,0) linear-gradient(transparent 15%,transparent 20%,rgba(22,126,165,.3) 55%,rgba(22,126,165,.7) 85%,rgba(22,126,165,.75) 100%) repeat scroll 0 0
     }
     .overlay.caption.caption-overlay span.bg:after {
-    @apply bg-[rgba(30,34,40,.2)]
+    @apply bg-[rgba(22,126,165,.2)]
     }
     .overlay-1 * {
     @apply box-border
@@ -3974,10 +3974,10 @@
     @apply max-w-full
     }
     .plyr__control--overlaid {
-        @apply shadow-[0_0_1.25rem_rgba(30,34,40,0.04)] text-[#343f52] opacity-100 p-5 border-0 bg-white
+        @apply shadow-[0_0_1.25rem_rgba(22,126,165,0.04)] text-[#343f52] opacity-100 p-5 border-0 bg-white
 }
     .plyr__control--overlaid:focus, .plyr__control--overlaid:hover {
-        @apply !text-[#3f78e0] shadow-[0_0_1.25rem_rgba(30,34,40,0.04)] transition-all duration-[0.2s] ease-in-out !bg-white
+        @apply !text-[#3f78e0] shadow-[0_0_1.25rem_rgba(22,126,165,0.04)] transition-all duration-[0.2s] ease-in-out !bg-white
 }
  .plyr__control--overlaid::after, .plyr__control--overlaid::before {
         @apply content-[""] block absolute opacity-80 animate-[ripple-1_2s_infinite_ease-in-out] z-[-1] rounded-[50%] inset-0 bg-white
@@ -4229,7 +4229,7 @@
     @apply absolute
     }
     .video-wrapper.bg-overlay {
-    @apply after:content-[""] after:block after:h-full after:w-full after:absolute after:z-[1] after:left-0 after:top-0 after:bg-[rgba(30,34,40,.4)]
+    @apply after:content-[""] after:block after:h-full after:w-full after:absolute after:z-[1] after:left-0 after:top-0 after:bg-[rgba(22,126,165,.4)]
     }
     .video-wrapper.bg-overlay.bg-overlay-gradient {
     @apply after:opacity-40 after:bg-[linear-gradient(120deg,#542461_50%,#332487_100%)]
@@ -4244,7 +4244,7 @@
     @apply absolute z-[2] w-full h-full flex items-center justify-center text-center flex-col
     }
     .goverlay {
-        @apply !bg-[rgba(30,34,40,.9)]
+        @apply !bg-[rgba(22,126,165,.9)]
      }
     @media (min-width:576px) {
         .container,.container-sm {
@@ -4422,7 +4422,7 @@
         @apply py-[1.7rem]
     }
     .navbar-expand-xxl.extended .navbar-collapse-wrapper,.navbar-expand-xxl.fancy .navbar-collapse-wrapper {
-        @apply shadow-[0_0.25rem_0.75rem_rgba(30,34,40,0.02)] w-full rounded-[0.4rem]
+        @apply shadow-[0_0.25rem_0.75rem_rgba(22,126,165,0.02)] w-full rounded-[0.4rem]
     }
     .navbar-expand-xxl.extended:not(.extended-alt):not(.fixed) .navbar-collapse-wrapper {
         @apply pl-2 pr-6 py-0
@@ -4616,7 +4616,7 @@
         @apply py-[1.7rem]
     }
     .navbar-expand-xl.extended .navbar-collapse-wrapper,.navbar-expand-xl.fancy .navbar-collapse-wrapper {
-        @apply shadow-[0_0.25rem_0.75rem_rgba(30,34,40,0.02)] w-full rounded-[0.4rem]
+        @apply shadow-[0_0.25rem_0.75rem_rgba(22,126,165,0.02)] w-full rounded-[0.4rem]
     }
     .navbar-expand-xl.extended:not(.extended-alt):not(.fixed) .navbar-collapse-wrapper {
         @apply pl-2 pr-6 py-0
@@ -6695,7 +6695,7 @@
         @apply pt-0
     }
     .navbar-expand-lg.extended .navbar-collapse-wrapper,.navbar-expand-lg.fancy .navbar-collapse-wrapper {
-        @apply shadow-[0_0.25rem_0.75rem_rgba(30,34,40,0.02)] w-full rounded-[0.4rem]
+        @apply shadow-[0_0.25rem_0.75rem_rgba(22,126,165,0.02)] w-full rounded-[0.4rem]
     }
     .navbar-expand-lg.extended:not(.extended-alt):not(.fixed) .navbar-collapse-wrapper {
         @apply pl-2 pr-6 py-0
@@ -6906,7 +6906,7 @@
     }
 
     .projects-overflow .project {
-        @apply shadow-[0_0_1.25rem_rgba(30,34,40,0.04)] rounded-[0.4rem]
+        @apply shadow-[0_0_1.25rem_rgba(22,126,165,0.04)] rounded-[0.4rem]
     }
     .projects-overflow .project figure img {
         @apply rounded-br-none rounded-bl-none
@@ -6974,13 +6974,13 @@
         @apply rounded-2xl
     }
     .itooltip-inner {
-        @apply shadow-[var(--shadow)] animate-[0.15s_linear_fadeIn] shadow-[0_0_1.25rem_rgba(30,34,40,0.04)] text-inherit px-4 py-[0.7rem] rounded-[0.4rem] bg-[rgba(255,255,255,.9)] z-10
+        @apply shadow-[var(--shadow)] animate-[0.15s_linear_fadeIn] shadow-[0_0_1.25rem_rgba(22,126,165,0.04)] text-inherit px-4 py-[0.7rem] rounded-[0.4rem] bg-[rgba(255,255,255,.9)] z-10
         }
         .itooltip-light.itooltip-inner {
-        @apply shadow-[0_0_1.25rem_rgba(30,34,40,0.04)] text-inherit bg-[rgba(255,255,255,.9)]
+        @apply shadow-[0_0_1.25rem_rgba(22,126,165,0.04)] text-inherit bg-[rgba(255,255,255,.9)]
         }
         .itooltip-dark.itooltip-inner {
-        @apply bg-[rgba(30,34,40,.9)]
+        @apply bg-[rgba(22,126,165,.9)]
         }
         .itooltip-color.itooltip-inner {
         @apply bg-[rgba(63,120,224,.9)]
@@ -7136,7 +7136,7 @@
         @apply py-[1.7rem]
     }
     .navbar-expand-md.extended .navbar-collapse-wrapper,.navbar-expand-md.fancy .navbar-collapse-wrapper {
-        @apply shadow-[0_0.25rem_0.75rem_rgba(30,34,40,0.02)] w-full rounded-[0.4rem]
+        @apply shadow-[0_0.25rem_0.75rem_rgba(22,126,165,0.02)] w-full rounded-[0.4rem]
     }
     .navbar-expand-md.extended:not(.extended-alt):not(.fixed) .navbar-collapse-wrapper {
         @apply pl-2 pr-6 py-0
@@ -9574,7 +9574,7 @@
             @apply py-[1.7rem]
         }
         .navbar-expand-sm.extended .navbar-collapse-wrapper,.navbar-expand-sm.fancy .navbar-collapse-wrapper {
-            @apply shadow-[0_0.25rem_0.75rem_rgba(30,34,40,0.02)] w-full rounded-[0.4rem]
+            @apply shadow-[0_0.25rem_0.75rem_rgba(22,126,165,0.02)] w-full rounded-[0.4rem]
         }
         .navbar-expand-sm.extended:not(.extended-alt):not(.fixed) .navbar-collapse-wrapper {
             @apply pl-2 pr-6 py-0
