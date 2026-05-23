@@ -1,3 +1,7 @@
 .navbar-brand img {
     width: 210px
 }
+
+.pricing-wrapper [class*=xl\:w-] .pricing.card .prices .price-duration {
+  margin-top: 5px;
+}
