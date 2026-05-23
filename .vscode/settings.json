@@ -1,4 +1,6 @@
 {
-    "workbench.iconTheme": "vscode-great-icons",
-    "workbench.colorTheme": "Theme Flat"
+  "workbench.iconTheme": "vscode-great-icons",
+  "workbench.colorTheme": "Theme Flat",
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode"
 }
