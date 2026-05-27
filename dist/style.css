@@ -1067,10 +1067,6 @@ video {
   border-radius: 100%;
 }
 
-.border {
-  border-width: 1px;
-}
-
 .border-0 {
   border-width: 0px;
 }
