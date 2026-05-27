@@ -1067,6 +1067,10 @@ video {
   border-radius: 100%;
 }
 
+.border {
+  border-width: 1px;
+}
+
 .border-0 {
   border-width: 0px;
 }
@@ -1158,6 +1162,11 @@ video {
 .px-\[15px\] {
   padding-left: 15px;
   padding-right: 15px;
+}
+
+.py-1 {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
 }
 
 .py-2 {
@@ -1330,6 +1339,10 @@ video {
   letter-spacing: 0.02rem;
 }
 
+.tracking-\[0\.08rem\] {
+  letter-spacing: 0.08rem;
+}
+
 .tracking-\[normal\] {
   letter-spacing: normal;
 }
@@ -1347,6 +1360,11 @@ video {
 .text-\[\#343f52\] {
   --tw-text-opacity: 1;
   color: rgb(52 63 82 / var(--tw-text-opacity, 1));
+}
+
+.text-\[\#6b7280\] {
+  --tw-text-opacity: 1;
+  color: rgb(107 114 128 / var(--tw-text-opacity, 1));
 }
 
 .text-\[\#747ed1\] {
@@ -12306,8 +12324,8 @@ blockquote.plyr__control--overlaid {
 .pricing-wrapper [class*=xl\:w-] .pricing.card .card-body {
   margin-left: auto;
   margin-right: auto;
-  padding-top: 3rem;
-  padding-bottom: 3rem;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
 }
 
 .pricing-wrapper [class*=xl\:w-] .pricing.card .card-body .icon {
@@ -22381,10 +22399,6 @@ blockquote.video-wrapper .video-content.icon-top:before {
     padding-top: 6rem;
   }
 
-  .md\:pt-32 {
-    padding-top: 8rem;
-  }
-
   .md\:pt-\[12\.5rem\] {
     padding-top: 12.5rem;
   }
@@ -22526,10 +22540,6 @@ blockquote.video-wrapper .video-content.icon-top:before {
     padding-top: 6rem;
   }
 
-  .lg\:pt-32 {
-    padding-top: 8rem;
-  }
-
   .lg\:pt-\[12\.5rem\] {
     padding-top: 12.5rem;
   }
@@ -22652,8 +22662,8 @@ blockquote.video-wrapper .video-content.icon-top:before {
     justify-content: flex-start !important;
   }
 
-  .xl\:p-\[1\.5rem_1\.25rem_1\.5rem\] {
-    padding: 1.5rem 1.25rem 1.5rem;
+  .xl\:p-\[1rem_1\.25rem_1\.5rem\] {
+    padding: 1rem 1.25rem 1.5rem;
   }
 
   .xl\:\!px-0 {
@@ -22700,10 +22710,6 @@ blockquote.video-wrapper .video-content.icon-top:before {
 
   .xl\:pt-24 {
     padding-top: 6rem;
-  }
-
-  .xl\:pt-32 {
-    padding-top: 8rem;
   }
 
   .xl\:pt-\[12\.5rem\] {

@@ -3999,7 +3999,7 @@
     @apply z-[3]
     }
     .pricing-wrapper [class*=xl\:w-] .pricing.card .card-body {
-    @apply mx-auto py-12
+    @apply mx-auto py-6
     }
     .pricing-wrapper [class*=xl\:w-] .pricing.card .card-body .icon {
     @apply mb-3
