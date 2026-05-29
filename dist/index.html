@@ -267,7 +267,7 @@
       data-image-src="./assets/img/photos/bg23.png"
       style="background-image: url(&quot;./assets/img/photos/bg23.png&quot;);">
       <div class="container pt-24 xl:pt-24 lg:pt-24 md:pt-24 pb-9">
-        <div class="flex flex-wrap mx-0 mt-[-50px] items-center text-center lg:text-left xl:text-left">
+        <div id="mobiles" class="flex flex-wrap mx-0 mt-[-50px] items-center text-center lg:text-left xl:text-left">
           <div class="xl:w-6/12 lg:w-6/12 xxl:w-5/12 w-full flex-[0_0_auto] max-w-full !relative mt-[50px]"
             data-cues="slideInDown" data-group="page-title" data-delay="700" data-disabled="true">
             <img src="./assets/img/svg/doodle1.svg" class="h-9 !absolute hidden xl:block lg:block" data-cue="fadeIn"
@@ -625,7 +625,8 @@
         <div class="absolute pointer-events-none"
           style="top: 50%; left: 50%; width: 100%; height: auto; transform: translate(-50%,-50%); z-index:0"><img
             class="w-full max-w-full h-auto" src="./assets/img/photos/blurry.png" alt="image"></div>
-        <div class="flex flex-wrap mx-[-15px] xl:mx-[-12.5px] lg:mx-[-12.5px] md:mx-[-12.5px] mt-[-25px]">
+        <div id='testimonials'
+          class="flex flex-wrap mx-[-15px] xl:mx-[-12.5px] lg:mx-[-12.5px] md:mx-[-12.5px] mt-[-25px]">
           <div
             class="md:w-6/12 lg:w-6/12 xl:w-5/12 w-full flex-[0_0_auto] px-[15px] max-w-full !self-end xl:px-[12.5px] lg:px-[12.5px] md:px-[12.5px] mt-[25px]">
             <div
@@ -776,22 +777,156 @@
     </svg>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/ScrollTrigger.min.js"></script>
 
   <script>
+    function easeOutCubic(t) {
+      return 1 - Math.pow(1 - t, 3);
+    }
+
+    let activeScrollAnimation = null;
+
+    function animateWindowScrollTo(targetY, duration) {
+      const startY = window.pageYOffset;
+      const distance = targetY - startY;
+      if (Math.abs(distance) < 1) return;
+
+      if (activeScrollAnimation) {
+        cancelAnimationFrame(activeScrollAnimation);
+      }
+
+      const startTime = performance.now();
+
+      function step(now) {
+        const elapsed = now - startTime;
+        const progress = Math.min(elapsed / duration, 1);
+        const eased = easeOutCubic(progress);
+        window.scrollTo(0, startY + distance * eased);
+
+        if (progress < 1) {
+          activeScrollAnimation = requestAnimationFrame(step);
+        } else {
+          activeScrollAnimation = null;
+        }
+      }
+
+      activeScrollAnimation = requestAnimationFrame(step);
+    }
+
     document.querySelectorAll('#planes-trigger').forEach(trigger => {
       trigger.addEventListener('click', function (e) {
         e.preventDefault();
         const planesSection = document.querySelector('#planes');
         if (planesSection) {
           const headerOffset = 70;
-          const targetTop = planesSection.getBoundingClientRect().top + window.pageYOffset - headerOffset;
-          window.scrollTo({
-            top: targetTop,
-            behavior: 'smooth'
-          });
+          const rawTargetTop = planesSection.getBoundingClientRect().top + window.pageYOffset - headerOffset;
+          const maxScrollTop = document.documentElement.scrollHeight - window.innerHeight;
+          const targetTop = Math.max(0, Math.min(rawTargetTop, maxScrollTop));
+          animateWindowScrollTo(targetTop, 900);
         }
       });
     });
+
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const mobilesSection = document.querySelector('#mobiles');
+
+    if (!prefersReducedMotion && mobilesSection && window.gsap && window.ScrollTrigger) {
+      gsap.registerPlugin(ScrollTrigger);
+
+      const mobilesTextColumn = mobilesSection.children[0];
+      const mobilesMediaColumn = mobilesSection.children[1];
+      const mobilesImage = mobilesMediaColumn ? mobilesMediaColumn.querySelector('img') : null;
+
+      if (mobilesTextColumn && mobilesMediaColumn) {
+        gsap.fromTo(
+          mobilesTextColumn,
+          { y: 100, rotate: -1.5 },
+          {
+            y: -24,
+            rotate: 0,
+            ease: 'elastic.out(1, 0.45)',
+            scrollTrigger: {
+              trigger: mobilesSection,
+              start: 'top 80%',
+              end: 'bottom 35%',
+              scrub: 0.9
+            }
+          }
+        );
+
+        gsap.fromTo(
+          mobilesMediaColumn,
+          { y: 130, scale: 0.9, rotate: -5 },
+          {
+            y: -40,
+            scale: 1.03,
+            rotate: 0,
+            ease: 'back.out(2.1)',
+            scrollTrigger: {
+              trigger: mobilesSection,
+              start: 'top 85%',
+              end: 'bottom 20%',
+              scrub: 1.1
+            }
+          }
+        );
+      }
+
+      if (mobilesImage) {
+        gsap.to(mobilesImage, {
+          yPercent: -10,
+          ease: 'none',
+          scrollTrigger: {
+            trigger: mobilesSection,
+            start: 'top bottom',
+            end: 'bottom top',
+            scrub: 1.4
+          }
+        });
+      }
+    }
+
+    const testimonialsSection = document.querySelector('#testimonials');
+
+    if (!prefersReducedMotion && testimonialsSection && window.gsap && window.ScrollTrigger) {
+      gsap.registerPlugin(ScrollTrigger);
+
+      const testimonialCards = testimonialsSection.querySelectorAll('.card');
+      const entryVectors = [
+        { x: -120, y: -120 },
+        { x: 120, y: -120 },
+        { x: 120, y: 120 },
+        { x: -120, y: 120 }
+      ];
+
+      testimonialCards.forEach((card, index) => {
+        const vector = entryVectors[index] || { x: 0, y: 80 };
+
+        gsap.fromTo(
+          card,
+          {
+            x: vector.x,
+            y: vector.y,
+            rotate: index % 2 === 0 ? -4 : 4,
+            scale: 0.9
+          },
+          {
+            x: 0,
+            y: 0,
+            rotate: 0,
+            scale: 1,
+            duration: 0.95,
+            ease: 'back.out(2.2)',
+            delay: index * 0.08,
+            scrollTrigger: {
+              trigger: testimonialsSection,
+              start: 'top 78%',
+              toggleActions: 'play none none reverse'
+            }
+          }
+        );
+      });
+    }
   </script>
   <script src="./assets/js/plugins.js"></script>
   <script src="./assets/js/theme.js"></script>
