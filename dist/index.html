@@ -927,6 +927,46 @@
         );
       });
     }
+
+    const pricingCards = document.querySelectorAll('#demos .pricing-wrapper .pricing.card');
+
+    if (!prefersReducedMotion && pricingCards.length && window.gsap && window.ScrollTrigger) {
+      gsap.registerPlugin(ScrollTrigger);
+
+      const pricingEntryVectors = [
+        { x: -130, y: 110 },
+        { x: 0, y: -140 },
+        { x: 130, y: 110 }
+      ];
+
+      pricingCards.forEach((card, index) => {
+        const vector = pricingEntryVectors[index] || { x: 0, y: 90 };
+
+        gsap.fromTo(
+          card,
+          {
+            x: vector.x,
+            y: vector.y,
+            rotate: index === 1 ? 0 : index % 2 === 0 ? -5 : 5,
+            scale: 0.88
+          },
+          {
+            x: 0,
+            y: 0,
+            rotate: 0,
+            scale: 1,
+            duration: 0.95,
+            ease: 'back.out(2.3)',
+            delay: index * 0.1,
+            scrollTrigger: {
+              trigger: '#demos .pricing-wrapper',
+              start: 'top 76%',
+              toggleActions: 'play none none reverse'
+            }
+          }
+        );
+      });
+    }
   </script>
   <script src="./assets/js/plugins.js"></script>
   <script src="./assets/js/theme.js"></script>
