@@ -814,11 +814,18 @@
         e.preventDefault();
         const planesSection = document.querySelector('#planes');
         if (planesSection) {
+          if (activeScrollAnimation) {
+            cancelAnimationFrame(activeScrollAnimation);
+            activeScrollAnimation = null;
+          }
           const headerOffset = 70;
           const rawTargetTop = planesSection.getBoundingClientRect().top + window.pageYOffset - headerOffset;
           const maxScrollTop = document.documentElement.scrollHeight - window.innerHeight;
           const targetTop = Math.max(0, Math.min(rawTargetTop, maxScrollTop));
-          animateWindowScrollTo(targetTop, 900);
+          window.scrollTo({
+            top: targetTop,
+            behavior: 'smooth'
+          });
         }
       });
     });
