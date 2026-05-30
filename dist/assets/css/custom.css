@@ -1,7 +1,50 @@
+
+:root {
+  --bs-primary: #004c8c;
+}
+
 .navbar-brand img {
-    width: 220px
+  width: 130px;
+  height: auto;
 }
 
 .pricing-wrapper [class*=xl\:w-] .pricing.card .prices .price-duration {
   margin-top: 5px;
+}
+
+.mediocielo-logo {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 10px;
+}
+
+.mediocielo-logo-title {
+  font-size: 34px;
+  line-height:1.1;
+  font-weight: bold;
+  color: var(--bs-primary, #004c8c);
+}
+
+.mediocielo-logo-subtitle {
+  font-size: 18px;
+  line-height:1;
+  font-weight: normal;
+  color: var(--bs-primary, #004c8c);
+}
+
+@media (max-width: 768px) {
+
+  .navbar-brand img {
+    width: 90px;
+  }
+
+  .mediocielo-logo-title {
+    font-size: 24px;
+  }
+
+  .mediocielo-logo-subtitle {
+    font-size: 14px;
+  }
+
 }
