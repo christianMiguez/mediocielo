@@ -9455,7 +9455,7 @@ img {
 }
 @media only screen and (min-width: 1400px) and (max-width: 1599px) {
   .main-section-area .hero1 {
-    padding: 160px 0 0 0;
+    padding: 160px 0 85px 0;
   }
 }
 .main-section-area .hero1 .hero-header-area {
