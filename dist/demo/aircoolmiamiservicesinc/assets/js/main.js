@@ -495,17 +495,17 @@ $("#schedule-visit-send").on("click", function() {
   var message  = $("#message").val().trim();
 
   if (!name || !phone || !location || !message) {
-    alert("Por favor completá todos los campos antes de enviar.");
+    alert("Please fill in all required fields before sending.");
     return;
   }
 
-  var text = "Hola REFABRIC, quiero agendar una visita:\n\n" +
-             "Nombre: " + name + "\n" +
-             "Teléfono: " + phone + "\n" +
-             "Ubicación: " + location + "\n" +
-             "Motivo: " + message;
+  var text = "Hello AirCool Miami Services Inc, I would like to request a free quote:\n\n" +
+             "Name: " + name + "\n" +
+             "Phone: " + phone + "\n" +
+             "Address: " + location + "\n" +
+             "Message: " + message;
 
-  var waUrl = "https://wa.me/59891685955?text=" + encodeURIComponent(text);
+  var waUrl = "https://wa.me/59892646464?text=" + encodeURIComponent(text);
   window.open(waUrl, "_blank");
   $("#schedule-visit-modal").modal("hide");
 });
