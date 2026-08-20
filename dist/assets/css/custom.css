@@ -81,37 +81,6 @@
   pointer-events: none;
 }
 
-/* pliegues (doblez) detrás de cada extremo de la cinta */
-.plan-ribbon::before,
-.plan-ribbon::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  width: 0;
-  height: 0;
-  z-index: -1;
-}
-
-.plan-ribbon::before {
-  left: -15px;
-  border-top: 15px solid transparent;
-  border-bottom: 15px solid transparent;
-  border-right: 15px solid #cf3350;
-}
-
-.plan-ribbon::after {
-  right: -15px;
-  border-top: 15px solid transparent;
-  border-bottom: 15px solid transparent;
-  border-left: 15px solid #cf3350;
-}
-
-@media (max-width: 991.98px) {
-  .plan-ribbon {
-    right: -16px;
-  }
-}
-
 /* Alinear el símbolo US$ verticalmente con el valor en todos los precios */
 .pricing-wrapper [class*=xl\:w-] .pricing.card .prices .price {
   align-items: center;
