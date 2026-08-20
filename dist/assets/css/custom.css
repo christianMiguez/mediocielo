@@ -59,51 +59,56 @@
 
 .plan-ribbon {
   position: absolute;
-  top: 22px;
-  right: -30px;
+  top: 26px;
+  right: -20px;
   z-index: 6;
-  width: 120px;
+  width: 150px;
+  height: 30px;
+  line-height: 30px;
   text-align: center;
-  background: linear-gradient(135deg, #ff7a59, #ff5e7e);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 45%, rgba(0, 0, 0, 0.14) 100%),
+    linear-gradient(135deg, #ff8a5c 0%, #ff5e7e 100%);
   color: #fff;
-  font-size: 0.6rem;
-  font-weight: 700;
-  letter-spacing: 0.04em;
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.07em;
   text-transform: uppercase;
-  padding: 6px 0;
   transform: rotate(45deg);
   transform-origin: center;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.18);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.22);
   white-space: nowrap;
   pointer-events: none;
 }
 
-/* pliegues detrás de cada extremo de la cinta */
+/* pliegues (doblez) detrás de cada extremo de la cinta */
 .plan-ribbon::before,
 .plan-ribbon::after {
   content: "";
   position: absolute;
+  top: 0;
+  width: 0;
+  height: 0;
   z-index: -1;
-  border: 12px solid #d9435e;
 }
 
 .plan-ribbon::before {
-  top: 0;
-  left: -12px;
-  border-left-color: transparent;
-  border-bottom-color: transparent;
+  left: -15px;
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+  border-right: 15px solid #cf3350;
 }
 
 .plan-ribbon::after {
-  bottom: 0;
-  right: -12px;
-  border-right-color: transparent;
-  border-top-color: transparent;
+  right: -15px;
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+  border-left: 15px solid #cf3350;
 }
 
 @media (max-width: 991.98px) {
   .plan-ribbon {
-    right: -26px;
+    right: -16px;
   }
 }
 
