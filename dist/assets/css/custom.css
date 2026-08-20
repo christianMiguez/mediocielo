@@ -48,3 +48,38 @@
   }
 
 }
+
+/* Plan destacado: resaltado + ribbon diagonal colgado */
+.pricing-wrapper .popular .pricing.card {
+  position: relative;
+  border: 2px solid #747ed1;
+  background-color: #fafbff;
+  box-shadow: 0 1rem 2.5rem rgba(116, 126, 209, 0.28);
+}
+
+.plan-ribbon {
+  position: absolute;
+  top: 24px;
+  right: -36px;
+  z-index: 6;
+  width: 165px;
+  text-align: center;
+  background: linear-gradient(135deg, #ff7a59, #ff5e7e);
+  color: #fff;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: 8px 0;
+  transform: rotate(45deg);
+  transform-origin: center;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.18);
+  white-space: nowrap;
+  pointer-events: none;
+}
+
+@media (max-width: 991.98px) {
+  .plan-ribbon {
+    right: -28px;
+  }
+}
