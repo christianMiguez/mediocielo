@@ -106,3 +106,12 @@
     right: -26px;
   }
 }
+
+/* Alinear el símbolo US$ verticalmente con el valor en todos los precios */
+.pricing-wrapper [class*=xl\:w-] .pricing.card .prices .price {
+  align-items: center;
+}
+
+.pricing-wrapper [class*=xl\:w-] .pricing.card .prices .price-currency {
+  padding-top: 0;
+}
